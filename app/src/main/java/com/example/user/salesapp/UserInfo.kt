@@ -6,6 +6,6 @@ class UserInfo
         var mobile:String=""
         var itemId:Int=0
         var qty:Int=0
-        var client_id:String="AagWCPC3a2ULQ39DwbmGseKcSrixGZK3pqN2qxLtZdCViwmv9kNW4nAg2UpG3FODDzXy8wjCTCYWhEBZ"
+        var client_id:String="AUiPh04gUkNlmLzOuAlQS-fCafrSp0lNjGsV2TvLiucd9w9TWEfzITRd8dKS97AAqnclp6Ze7gKGTw84"
     }
 }

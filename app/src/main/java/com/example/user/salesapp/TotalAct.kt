@@ -46,7 +46,7 @@ class TotalAct : AppCompatActivity() {
         paypal_btn.setOnClickListener {
 
             amount=total_tv.text.toString().toDouble()
-            var payment=PayPalPayment(BigDecimal.valueOf(amount),"USD","Udemy Sales App",PayPalPayment.PAYMENT_INTENT_SALE)
+            var payment=PayPalPayment(BigDecimal.valueOf(amount),"USD","FoodOnline App",PayPalPayment.PAYMENT_INTENT_SALE)
 
             var intent=Intent(this,PaymentActivity::class.java)
             intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config)
