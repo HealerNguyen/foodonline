@@ -30,7 +30,7 @@ class QtyFragment : DialogFragment() {
 
         btn.setOnClickListener {
 
-            var url="http://192.168.8.100/SalesWeb/add_temp.php?mobile=" + UserInfo.mobile+"&itemid="+UserInfo.itemId+
+            var url=UserInfo.urlIp + "/SalesWeb/add_temp.php?mobile=" + UserInfo.mobile+"&itemid="+UserInfo.itemId+
                     "&qty="+et.text.toString()
 
             var rq:RequestQueue=Volley.newRequestQueue(activity)

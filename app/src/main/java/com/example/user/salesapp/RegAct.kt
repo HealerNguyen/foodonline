@@ -22,7 +22,7 @@ class RegAct : AppCompatActivity() {
         reg_signup.setOnClickListener {
 
             if(reg_password.text.toString().equals(reg_confirm.text.toString())) {
-                var url = "http://localhost/SalesWeb/add_user.php?mobile=" + reg_mobile.text.toString() + "&password=" +
+                var url = UserInfo.urlIp + "/SalesWeb/add_user.php?mobile=" + reg_mobile.text.toString() + "&password=" +
                         reg_password.text.toString() + "&name=" + reg_name.text.toString() + "&address=" + reg_address.text.toString()
 
                 var rq:RequestQueue=Volley.newRequestQueue(this)

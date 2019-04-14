@@ -20,17 +20,17 @@ import java.math.BigDecimal
 class TotalAct : AppCompatActivity() {
 
     var config:PayPalConfiguration?=null
-    var amount:Double=0.0
+    var amount:Double=5.1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_total)
 
-        var url="http://192.168.8.100/SalesWeb/get_total.php?bill_no=" + intent.getStringExtra("bno")
+        var url=UserInfo.urlIp + "/SalesWeb/get_total.php?bill_no=" + intent.getStringExtra("bno")
         var rq: RequestQueue = Volley.newRequestQueue(this)
         var sr= StringRequest(Request.Method.GET,url, Response.Listener { response ->
 
-            total_tv.text=response
+            total_tv.text="7.89"
 
         }, Response.ErrorListener { error ->
             Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()

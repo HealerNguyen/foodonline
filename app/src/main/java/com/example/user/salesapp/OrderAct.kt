@@ -22,7 +22,7 @@ class OrderAct : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order)
 
-        var url="http://192.168.8.100/SalesWeb/get_temp.php?mobile="+UserInfo.mobile
+        var url=UserInfo.urlIp + "/SalesWeb/get_temp.php?mobile="+UserInfo.mobile
 
         var list=ArrayList<String>()
         var rq:RequestQueue=Volley.newRequestQueue(this)
@@ -59,7 +59,7 @@ class OrderAct : AppCompatActivity() {
 
         if(item?.itemId==R.id.item_cancel)
         {
-            var url="http://192.168.8.100/SalesWeb/cancel_order.php?mobile=" + UserInfo.mobile
+            var url=UserInfo.urlIp + "/SalesWeb/cancel_order.php?mobile=" + UserInfo.mobile
 
             var rq:RequestQueue=Volley.newRequestQueue(this)
             var sr= StringRequest(Request.Method.GET,url,Response.Listener { response ->
@@ -76,7 +76,7 @@ class OrderAct : AppCompatActivity() {
 
         if(item?.itemId==R.id.item_confirm)
         {
-            var url="http://192.168.8.100/SalesWeb/confirm_order.php?mobile=" + UserInfo.mobile
+            var url=UserInfo.urlIp + "/SalesWeb/confirm_order.php?mobile=" + UserInfo.mobile
             var rq:RequestQueue=Volley.newRequestQueue(this)
             var sr= StringRequest(Request.Method.GET,url,Response.Listener { response ->
 

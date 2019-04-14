@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             if(login_password.text == null || login_mobile.text == null) {
                 Toast.makeText(this,"Please enter information to login!", Toast.LENGTH_LONG).show()
             }
-            var url = "http://127.0.0.1/SalesWeb/login.php?mobile=" + login_mobile.text.toString() + "&password=" +
+            var url = UserInfo.urlIp + "/SalesWeb/login.php?mobile=" + login_mobile.text.toString() + "&password=" +
                     login_password.text.toString()
 
             var rq: RequestQueue = Volley.newRequestQueue(this)
